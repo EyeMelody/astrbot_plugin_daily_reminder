@@ -43,7 +43,7 @@ FILES = [
 
 
 def build():
-    output = ROOT.parent / "astrbot_plugin_daily_reminder-v0.5.4.zip"
+    output = ROOT.parent / "astrbot_plugin_daily_reminder-v0.5.5.zip"
     for name in FILES:
         if not (ROOT / name).is_file():
             raise RuntimeError(f"Missing required file: {name}")

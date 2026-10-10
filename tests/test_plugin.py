@@ -8,7 +8,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import AsyncMock, Mock, patch
 
-from fixtures import account, notes
+from fixtures import account, notes, stamp
 
 
 def fake_host(root):
@@ -124,6 +124,41 @@ class PluginTests(unittest.IsolatedAsyncioTestCase):
         await self.plugin.terminate()
         self.patch.stop()
         sys.modules.pop("astrbot_plugin_daily_reminder.main", None)
+
+    async def test_background_loop_sends_due_image_and_deduplicates(self):
+        self.plugin.task.cancel()
+        await asyncio.gather(self.plugin.task, return_exceptions=True)
+        now = stamp("2026-10-10 23:00:10")
+        self.plugin.service.clock = lambda: now
+        self.plugin.store.subscribe(
+            self.owner,
+            self.event.unified_msg_origin,
+            "",
+            "23:00",
+            now - 70,
+            games=["starrail"],
+        )
+        self.plugin.service.client.fetch = AsyncMock(return_value=notes()[1])
+        original_sleep = asyncio.sleep
+
+        async def one_round(delay):
+            if delay == 60:
+                raise asyncio.CancelledError
+            await original_sleep(delay)
+
+        # Exercise the actual plugin loop, including login-session housekeeping.
+        with patch.object(self.main.asyncio, "sleep", side_effect=one_round):
+            with self.assertRaises(asyncio.CancelledError):
+                await self.plugin.run()
+            with self.assertRaises(asyncio.CancelledError):
+                await self.plugin.run()
+        self.context.send_message.assert_awaited_once()
+        origin, chain = self.context.send_message.call_args.args
+        self.assertEqual(origin, self.event.unified_msg_origin)
+        self.assertEqual(chain.chain[0][0], "image")
+        self.assertTrue(chain.chain[0][1].startswith(b"\x89PNG"))
+        row = self.plugin.store.subscription(self.owner, origin)
+        self.assertEqual(row["last_sent"], "2026-10-10")
 
     async def test_native_command_group_has_all_commands(self):
         self.assertEqual(

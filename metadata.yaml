@@ -1,7 +1,7 @@
 name: astrbot_plugin_daily_reminder
 display_name: 二游日常备忘姬
 desc: 原神、星铁、绝区零、异环日常查询与定时提醒。
-version: v0.5.4
+version: v0.5.5
 author: EyeMelody
 repo: https://github.com/EyeMelody/astrbot_plugin_daily_reminder
 support_platforms:
