@@ -1,0 +1,34 @@
+[
+  {
+    "game": "genshin",
+    "name": "原神-6周年",
+    "publisher": "Shanghai miHoYo YingTie Technology Co., Ltd.",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/db/91/0cdb910c-48ee-d0ca-6ba1-94770855de73/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "store": "https://apps.apple.com/cn/app/%E5%8E%9F%E7%A5%9E-6%E5%91%A8%E5%B9%B4/id1467190251?uo=4",
+    "retrieved": "2026-10-03"
+  },
+  {
+    "game": "starrail",
+    "name": "崩坏：星穹铁道",
+    "publisher": "Shanghai miHoYo YingTie Technology Co., Ltd.",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/68/a5/48/68a548c6-05e7-7f18-0adc-f757c19031c8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "store": "https://apps.apple.com/cn/app/%E5%B4%A9%E5%9D%8F-%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/id1523037824?uo=4",
+    "retrieved": "2026-10-03"
+  },
+  {
+    "game": "zzz",
+    "name": "绝区零",
+    "publisher": "Shanghai miHoYo YingTie Technology Co., Ltd.",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9c/18/91/9c18913d-f0bc-6832-2ca6-0732e36b50e9/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+    "store": "https://apps.apple.com/cn/app/%E7%BB%9D%E5%8C%BA%E9%9B%B6/id1606359076?uo=4",
+    "retrieved": "2026-10-03"
+  },
+  {
+    "game": "nte",
+    "name": "异环",
+    "publisher": "Perfect World Interactive Entertainment Co., Ltd",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/89/67/dc/8967dc31-ed86-3907-2306-8a2d09c51e60/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "store": "https://apps.apple.com/cn/app/%E5%BC%82%E7%8E%AF/id6514281568?uo=4",
+    "retrieved": "2026-10-03"
+  }
+]
