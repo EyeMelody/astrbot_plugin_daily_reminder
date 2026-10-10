@@ -34,6 +34,7 @@ FILES = [
     "assets/icons/nte.jpg",
     "assets/icons/sources.json",
     "licenses/GPL-3.0.txt",
+    "licenses/ATTRIBUTION.txt",
     "docs/images/daily-preview.png",
     "docs/images/help-preview.png",
     "docs/images/subscription-preview.png",

@@ -48,51 +48,6 @@
 
 ## 4. 丨其他
 
-- 代码采用 [AGPL-3.0](LICENSE)，复用代码和素材许可见下方折叠说明。
+- 代码采用 [AGPL-3.0](LICENSE)。
 
 - 本项目仅供学习使用，请勿用于商业用途
-
-<details>
-<summary>来源与许可</summary>
-
-v0.5.4 更新订阅时间文案，README 的居中标题、分区和折叠功能预览结构参考 ZZZeroUID 的 master 分支 README（2026-10-10 查阅）。文档内容按本插件功能重新编写，未复制其图片或功能说明。
-
-v0.5.3 订阅状态图沿用本插件账号卡片样式，日常进度为零时直接显示未登录推测。无新增外部素材。
-
-v0.5.2 调整帮助图片标题、版本标签与指令分区，继续使用原有字体和插件图标，无新增外部素材。
-
-v0.5.1 按用户要求采用 [tianyingtl/astrbot_eryou_daily](https://github.com/tianyingtl/astrbot_eryou_daily) 提交 `a2290f0465df6c6a27cecb2fbcc22ae3c3387035` 的固定米游社设备 ID 与指纹常量，仅对照这两个协议值，未复制其请求实现。移除动态指纹请求及缓存写入；登录新账号改为直接替换，不再要求二次确认。三游戏小组件优先及普通便笺回退保留，未实号验证免验证效果。
-
-v0.5.0 重构指令与订阅管理，新增帮助和订阅状态绘图。帮助图参考用户提供的分区卡片布局，由本项目使用 Pillow、本地字体和现有插件图标绘制，未复制附件中的角色或背景素材。
-
-v0.4.2 原神小组件协议参考并改编 gsuid_core（GPL-3.0）提交 `87c06f11ae10c12b3bb8e76b3c6f420c831282a8` 的 `utils/api/mys/request.py:get_widget_resin_data`、`base_request.py:endpoint_request`、`tools.py:get_web_ds_token` 和 `models/widget.py`；采用 `widget/v2`、`game_id=2`、Web DS 与 `miyousheluodi` 渠道。绝区零参考并改编 ZZZeroUID（GPL-3.0）提交 `7774832fdc6563613668f8c1235e4933afd2301d` 的 `utils/api/requests.py:get_zzz_widget_info`、`simple_zzz_req`、`api.py` 和 `models.py:ZZZWidgetNoteResp`，使用 SToken、不传 UID 参数且不带 DS。新增按游戏校验响应结构、角色归属检查和失败回退；不采用上游原神缺失字段的占位次数，不丢弃实际返回的历练点数据。许可全文见 `licenses/GPL-3.0.txt`。
-
-v0.4.1 的星铁桌面小组件查询参考并改编 StarRailUID（GPL-3.0）提交 `739a80a26b7a137b6b7b7d45435c769822de06d0` 的 `StarRailUID/utils/mys_api.py:get_widget_stamina_data`、`sruid_utils/api/mys/api.py`、`models.py:WidgetStamina` 和 `starrailuid_stamina/stamina_text.py`。保留其 SToken、空查询 DS、原生客户端请求约定及失败回退思路；设备型号和系统版本与本插件已有指纹资料保持一致。新增凭据账号校验、响应角色归属检查、有限请求次数与两条接口的错误说明，不复制上游日志或伪造备用指纹。原许可见 `licenses/GPL-3.0.txt`。
-
-v0.4.0 核对 [Starward issue #1324](https://github.com/Scighost/Starward/issues/1324) 的正文、评论及时间线：提问者自行关闭，无关联修复提交。另核对 Starward 提交 `607a3077d9440af7e88afbd2cf7773f3d0dd896b` 的 `GameRecordPage.xaml.cs`、`BBSWebBridge.xaml.cs` 和 `HyperionClient.cs`：其验证错误处理会打开带账号上下文的官方战绩页，不是无人值守验证。仅参考错误码及流程，未复制其代码或素材。本版改名、改前缀并限制私聊，补充 10053 错误分类；不声称已解除米游社验证限制。
-
-v0.3.3 参考并改编 gsuid_core 提交 `87c06f11ae10c12b3bb8e76b3c6f420c831282a8` 的 `utils/api/mys/base_request.py`、`api.py`：设备指纹端点、合成 Android 设备资料、游戏验证请求头及至多两次请求的流程。参考 StarRailUID 提交 `739a80a26b7a137b6b7b7d45435c769822de06d0` 的设备型号与系统版本请求头，以及 ZZZeroUID 提交 `7774832fdc6563613668f8c1235e4933afd2301d` 的绝区零请求头约定。相关上游均保留 GPL-3.0 权利，许可全文见 `licenses/GPL-3.0.txt`。本插件自行实现设备关联存储、响应大小限制和失败冷却；未复制外部验证码服务、日志或用户数据。设备资料为固定客户端配置，不采集运行机器的硬件信息。
-
-v0.3.2 对照 [TaJiDuo-plugin](https://github.com/Entropy-Increase-Team/TaJiDuo-plugin/blob/4ea4c260dd6e59a1811961bbdbc13bb315a56fba/apps/yihuan/realtime.js) 中的异环字段兼容关系，支持周本次数的两种大小写键名；仅参考字段约定，未复制实现。米游社验证错误码和 DS 参数另核对 gsuid_core 提交 `87c06f11ae10c12b3bb8e76b3c6f420c831282a8` 的 `base_request.py` 与 `tools.py`，保留真实错误码以便排查，未接入自动验证流程。
-
-插件图标 `logo.png` 为本项目通过内置图像生成工具制作的原创 Q 版看板娘，配合备忘录与手柄元素，不使用官方游戏角色或标志。生成说明与完整提示词见 `docs/icon-design.md`。
-
-安装包使用 `MemoSymbols.ttf` 与 `MemoThai.ttf` 作为颜文字补充字体：从下述 Noto Sans 和 Noto Sans Thai 原字体提取本插件使用的字符，固定常规字重，并重命名字体家族。保留原版权与 SIL OFL 1.1 许可；完整原字体仍保留在源码中。
-
-二游日常备忘姬 v0.5.1，作者 EyeMelody。新编写部分按 GNU AGPL v3 发布，完整文本见 `LICENSE`。保留以下项目作者及贡献者的权利和原许可；GPLv3 代码与 AGPLv3 代码组合按两份许可证第 13 条处理。
-
-- 官方模板：[Soulter/helloworld](https://github.com/Soulter/helloworld)，本次重新获取默认分支 master 的提交 `0c0d52b17e2feb76a7bcff887cac3d0e12eecc09`，AGPL-3.0。保留原 LICENSE，替换了示例入口、元数据和 README。
-- [EyeMelody/astrbot_plugin_starrail](https://github.com/EyeMelody/astrbot_plugin_starrail)，本地 v0.9.3，GPL-3.0。`login_api.py` 从其 `login.py` 的二维码协议、令牌提取及 Cookie 刷新部分改编；`api.py` 的 Cookie 校验、DS 签名与错误码分类参考其实现。不复制绘图素材、字体或用户数据。原 GPL 全文见 `licenses/GPL-3.0.txt`。
-- [Genshin-bots/gsuid_core](https://github.com/Genshin-bots/gsuid_core)，GPL-3.0；登录参考代码的上游提交为 `2d90ae77a47d947622e3cd43cc851a01c2062f48`。涉及 `utils/api/mys/tools.py`、`account_request.py`、`base_request.py` 及 `utils/cookie_manager/qrlogin.py` 的国服签名、二维码端点、令牌提取和请求约定。
-- [baiqwerdvd/StarRailUID](https://github.com/baiqwerdvd/StarRailUID)，GPL-3.0；星铁助手的上游参考提交 `8286ec8b419629e739a4994a256e77efeac0ae06`。本插件沿用星铁便笺端点和状态判断思路，不包含原项目素材或面板实现。
-- [thesadru/genshin.py](https://github.com/thesadru/genshin.py)，对照提交 `d2b50dd2cf1e40cf150eabbea52dc7ef351ca9db` 的 `client/routes.py`、三游戏 chronicle 客户端与 notes 模型核实端点、字段和枚举含义。未复制该库实现，也不将其作为运行依赖。
-- v0.2.2 字段核实：[GenshinUID](https://github.com/KimigaiiWuyi/GenshinUID)，提交 `6087286c2ac79f4d10f810efec0deeef00b9abcf` 的 `genshinuid_resin/draw_resin_card.py` 用于对照委托与领奖状态；[ZZZeroUID](https://github.com/ZZZure/ZZZeroUID)，提交 `7774832fdc6563613668f8c1235e4933afd2301d` 的 `utils/api/models.py`、`zzzerouid_stamina/draw_zzz_stamina.py` 用于核实新版悬赏优先级与调查点停用情况。仅对照协议与字段，未复制其实现或素材。
-- 砺行修远：GenshinUID 上述版本未展示此项，另对照 [TeyvatGuide](https://github.com/BTMuli/TeyvatGuide) 提交 `ebd2b360f3597e9d37f5e20433f30145ac5df576` 的 `src/types/Game/DailyNote.d.ts`，以及 [AUTO-MAS](https://github.com/AUTO-MAS-Project/AUTO-MAS) 提交 `699de5af57b7955a19ed4585f1fe64f9430e1e29` 的 `app/tools/community_activity_parser.py` 核实 `week_active_progress` 字段含义。仅对照接口字段，未复制实现。
-- [tyql688/NTEUID](https://github.com/tyql688/NTEUID)，提交 `a4ca7e2cf94e73400d7d160d671b19922fddbbe7`，GPL-3.0。`nte.py` 和 `nte_auth.py` 参考并改编其 SDK 中的老虎短信登录、AES 参数处理、塔吉多请求签名、令牌续期、角色列表和 roleHome 字段模型；将网页登录入口改为私聊指令，并加入本插件的账号隔离与替换确认。不包含原项目图片、字体和用户数据，GPL 全文见 `licenses/GPL-3.0.txt`。
-- 字体：`assets/NotoSansCJKsc-Regular.otf` 原样取自 [notofonts/noto-cjk](https://github.com/notofonts/noto-cjk)，提交 `f8d157532fbfaeda587e826d4cd5b21a49186f7c`，路径 `Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf`。保留字体嵌入的版权信息，SIL OFL 1.1 全文见 `assets/OFL.txt`。字体未修改。
-- 颜文字补充字体：Google Fonts 的 [Noto Sans](https://github.com/google/fonts/tree/main/ofl/notosans) 和 [Noto Sans Thai](https://github.com/google/fonts/tree/main/ofl/notosansthai)，2026-10-03 获取，原样使用可变字体。SHA256 分别为 `bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d` 和 `5a1c559bb539583c8a1fd99d1c5b9491e5e14478c9cd2bd0970d5c3096cc9ef8`。SIL OFL 1.1 全文见 `assets/notosans-OFL.txt`、`assets/notosansthai-OFL.txt`。
-- 游戏应用头像：来自四款游戏在中国区 App Store 的公开应用图标，原文件与获取地址记录在 `assets/icons/sources.json`。游戏名称、商标和图标版权归各自权利人所有，不适用本插件代码的 AGPL 许可；仅用于识别卡片中的游戏，不表示官方授权或合作。渲染时缩小并裁为圆角，不修改原图文件。
-
-主要改动：将登录与推送分离为独立插件，支持原神、星铁、绝区零和异环；改用认证后的游戏角色列表核实绑定；新增每日汇总、账号替换确认、分游戏状态解析、SQLite 存储和深色文字卡片。运行时不依赖早柚核心或其他 AstrBot 插件。预览图片均由模拟数据生成。
-
-</details>
