@@ -13,10 +13,6 @@
 >
 > ✨如果需要添加更多日常提醒功能欢迎在 [Issues](https://github.com/EyeMelody/astrbot_plugin_daily_reminder/issues) 中提出✨
 
-在 AstrBot 插件管理中通过仓库地址 `https://github.com/EyeMelody/astrbot_plugin_daily_reminder` 安装，或从 [Releases](https://github.com/EyeMelody/astrbot_plugin_daily_reminder/releases) 下载 ZIP 后上传安装。仅支持国服、QQ NapCat / OneBot 私聊，Python 3.11+，AstrBot 4.28.1 至 4.x。
-
-安装后私聊发送 `/备忘姬 帮助`。预览使用模拟数据，真实环境待验证项见 [验证记录](VALIDATION.md)。
-
 ## 2.功能
 
 <details>
