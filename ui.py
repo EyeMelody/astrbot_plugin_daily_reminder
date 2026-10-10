@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 from .models import GAMES
 
 ROOT = Path(__file__).parent
-FONT = ROOT / "assets/NotoSansCJKsc-Regular.otf"
+FONT = ROOT / "assets/MemoCJK-Regular.otf"
 VERSION = re.search(
     r"(?m)^version:\s*['\"]?(v?[\d.]+)", (ROOT / "metadata.yaml").read_text(encoding="utf-8")
 ).group(1)

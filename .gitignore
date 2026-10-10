@@ -7,3 +7,6 @@ __pycache__/
 *.db
 .env
 *.zip
+assets/NotoSansCJKsc-Regular.otf
+assets/NotoSans[[]wdth,wght].ttf
+assets/NotoSansThai[[]wdth,wght].ttf

@@ -22,7 +22,7 @@ FILES = [
     "requirements.txt",
     "README.md",
     "LICENSE",
-    "assets/NotoSansCJKsc-Regular.otf",
+    "assets/MemoCJK-Regular.otf",
     "assets/OFL.txt",
     "assets/MemoSymbols.ttf",
     "assets/MemoThai.ttf",
@@ -35,15 +35,11 @@ FILES = [
     "assets/icons/sources.json",
     "licenses/GPL-3.0.txt",
     "licenses/ATTRIBUTION.txt",
-    "docs/images/daily-preview.png",
-    "docs/images/help-preview.png",
-    "docs/images/subscription-preview.png",
-    "docs/icon-design.md",
 ]
 
 
 def build():
-    output = ROOT.parent / "astrbot_plugin_daily_reminder-v0.5.5.zip"
+    output = ROOT.parent / "astrbot_plugin_daily_reminder-v0.5.6.zip"
     for name in FILES:
         if not (ROOT / name).is_file():
             raise RuntimeError(f"Missing required file: {name}")
@@ -56,7 +52,7 @@ def build():
         if archive.testzip() is not None:
             raise RuntimeError("ZIP CRC verification failed")
     size = output.stat().st_size
-    if size >= 16 * 1024 * 1024:
+    if size >= 16_000_000:
         raise RuntimeError(f"Package exceeds 16 MiB: {size}")
     print(f"{output}\n{size / 1024 / 1024:.2f} MiB")
     print("SHA256 " + hashlib.sha256(output.read_bytes()).hexdigest())

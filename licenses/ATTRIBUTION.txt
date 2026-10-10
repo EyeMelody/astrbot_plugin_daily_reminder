@@ -37,3 +37,5 @@ v0.3.2 对照 [TaJiDuo-plugin](https://github.com/Entropy-Increase-Team/TaJiDuo-
 - 游戏应用头像：来自四款游戏在中国区 App Store 的公开应用图标，原文件与获取地址记录在 `assets/icons/sources.json`。游戏名称、商标和图标版权归各自权利人所有，不适用本插件代码的 AGPL 许可；仅用于识别卡片中的游戏，不表示官方授权或合作。渲染时缩小并裁为圆角，不修改原图文件。
 
 主要改动：将登录与推送分离为独立插件，支持原神、星铁、绝区零和异环；改用认证后的游戏角色列表核实绑定；新增每日汇总、账号替换确认、分游戏状态解析、SQLite 存储和深色文字卡片。运行时不依赖早柚核心或其他 AstrBot 插件。预览图片均由模拟数据生成。
+
+v0.5.6：运行字体改为 MemoCJK-Regular.otf，从上述 NotoSansCJKsc-Regular.otf 派生，保留全部 44810 个 Unicode 字符，移除卡片不使用的布局替换字形并更名字体家族为 Memo CJK。原版权及 SIL OFL 1.1 许可保留在字体和 assets/OFL.txt 中。原始字体可从 v0.5.5 标签获取；可复现脚本位于 tools/subset_font.py。此前“字体未修改”的描述仅指原始 Noto 字体。

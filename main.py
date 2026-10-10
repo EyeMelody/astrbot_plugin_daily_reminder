@@ -46,7 +46,7 @@ HELP = help_text()
     "astrbot_plugin_daily_reminder",
     "EyeMelody",
     "原神、星铁、绝区零、异环日常查询与定时提醒。",
-    "0.5.5",
+    "0.5.6",
 )
 class DailyReminder(Star):
     def __init__(self, context: Context):

@@ -9,7 +9,7 @@ from pathlib import Path
 from .models import CN, GAMES
 
 COLORS = {"genshin": "#CBA968", "starrail": "#A99CEF", "zzz": "#C8DE6A", "nte": "#78CDD8"}
-FONT = Path(__file__).parent / "assets" / "NotoSansCJKsc-Regular.otf"
+FONT = Path(__file__).parent / "assets" / "MemoCJK-Regular.otf"
 STATUS_COLORS = {"active": "#85D9A2", "inactive": "#F08086", "unknown": "#A8B3C3"}
 
 

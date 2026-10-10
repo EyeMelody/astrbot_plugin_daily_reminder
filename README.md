@@ -1,7 +1,7 @@
 <p align="center">
   <img src="logo.png" width="220" alt="备忘姬">
 </p>
-<h1 align="center">二游日常备忘姬 v0.5.5</h1>
+<h1 align="center">二游日常备忘姬 v0.5.6</h1>
 <h4 align="center">原神 · 星铁 · 绝区零 · 异环<br>日常查询与定时提醒</h4>
 <p align="center">
   <a href="#1-丨安装">安装</a> · <a href="#2-丨功能">功能与指令</a> · <a href="#3-丨感谢">感谢</a>
