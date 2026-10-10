@@ -7,7 +7,7 @@
   <a href="#1-丨安装">安装</a> · <a href="#2-丨功能">功能与指令</a> · <a href="#3-丨感谢">感谢</a>
 </p>
 
-## 1. 丨安装
+## 1.安装
 
 > 本插件为 **AstrBot** 插件。
 >
@@ -17,7 +17,7 @@
 
 安装后私聊发送 `/备忘姬 帮助`。预览使用模拟数据，真实环境待验证项见 [验证记录](VALIDATION.md)。
 
-## 2. 丨功能
+## 2.功能
 
 <details>
 <summary>今日日常 - 命令: /备忘姬 今日日常</summary>
@@ -40,14 +40,13 @@
 
 </details>
 
-## 3. 丨感谢
+## 3.感谢
 
 - [Soulter/helloworld](https://github.com/Soulter/helloworld)：AstrBot 官方插件模板。
 - [gsuid_core](https://github.com/Genshin-bots/gsuid_core)、[GenshinUID](https://github.com/KimigaiiWuyi/GenshinUID)、[StarRailUID](https://github.com/baiqwerdvd/StarRailUID)、[ZZZeroUID](https://github.com/ZZZure/ZZZeroUID)：米游社协议与游戏字段参考。
 - [NTEUID](https://github.com/tyql688/NTEUID)：塔吉多登录与异环数据协议参考。
 
-## 4. 丨其他
+## 4.其他
 
-- 代码采用 [AGPL-3.0](LICENSE)，复用代码和素材许可见 [NOTICE.md](NOTICE.md)。
-
-- 本项目仅供学习使用，请勿用于商业用途
+- 本项目仅供学习使用，请勿用于商业用途。
+- [AGPL-3.0](LICENSE)。
